@@ -15,9 +15,7 @@ class ViewController: UIViewController {
         return (cardButtons.count + 1) / 2
     }
     
-    func reverse(text: String) -> String {
-        return String(text.reversed())
-    }
+
     
     //Lazy is used because Concentration(numberOfPairOfCards is not yet initialised. 
     //No didSet , only init when we are gonna to use it 
