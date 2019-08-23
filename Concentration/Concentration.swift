@@ -9,7 +9,7 @@
 import Foundation
 
 
-class Concentration{
+struct Concentration{
     
     //Classes have free init, as long as all objs are set
     var cards = [Card]()
@@ -34,7 +34,7 @@ class Concentration{
         }
     }
     
-    func chooseCard(at index: Int){
+    mutating func chooseCard(at index: Int){
         //Add this to assure that others can debug when users enter a non valid object 
         assert(cards.indices.contains(index),"Concentration.chooseCard(at:\(index):Chosen index not in the card")
         if !cards[index].isMatched{
